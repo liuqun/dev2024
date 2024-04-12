@@ -8,12 +8,14 @@ export MYDIR=`pwd`
 # nginx-log
 # nginx-conf.d
 
+export NGINX_VERSION="1.25.4"
+podman pull docker.io/nginx:${NGINX_VERSION}
 podman run -d --rm \
     -p 8080:80 \
     --name mynginx \
     -v $MYDIR/webpages:/usr/share/nginx/html \
     -v $MYDIR/nginx-log:/var/log/nginx \
-    nginx
+    nginx:${NGINX_VERSION}
 ```
 
 > NOTE:
