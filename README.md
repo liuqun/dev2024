@@ -1,5 +1,6 @@
 # Example using podman/docker:
 
+## Nginx
 - To start my nginx server:
 ```
 export MYDIR=`pwd`
@@ -13,7 +14,7 @@ podman pull docker.io/nginx:${NGINX_VERSION}
 podman run -d --rm \
     -p 8080:80 \
     --name mynginx \
-    -v $MYDIR/webpages:/usr/share/nginx/html \
+    -v $MYDIR/webpages:/usr/share/nginx/html:ro \
     -v $MYDIR/nginx-log:/var/log/nginx \
     nginx:${NGINX_VERSION}
 ```
