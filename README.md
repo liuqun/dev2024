@@ -1,7 +1,7 @@
 # Example using podman/docker:
 
 ```
-export MYDIR=/home/liuqun
+export MYDIR=`pwd`
 
 # webpages
 # nginx-log
