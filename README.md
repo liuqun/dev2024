@@ -12,7 +12,7 @@ export MYDIR=`pwd`
 export NGINX_VERSION="1.25.4"
 podman pull docker.io/nginx:${NGINX_VERSION}
 podman run -d --rm \
-    -p 8080:80 \
+    -p "8080:80" \
     --name mynginx \
     -v $MYDIR/webpages:/usr/share/nginx/html:ro \
     -v $MYDIR/nginx-log:/var/log/nginx \
