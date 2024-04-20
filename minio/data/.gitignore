@@ -1,0 +1,5 @@
+# 忽略 MinIO 系统临时文件
+.minio.sys/**
+# 忽略 MinIO 中建立的所有 bucket 数据桶目录
+*
+!.gitignore
