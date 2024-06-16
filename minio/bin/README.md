@@ -7,6 +7,9 @@ chomd 755 ./mc
 credentials.json 文件可用 MinIO client 命令 mc 导入
 ```
 mc alias import newalias ./credentials.json
+
+mc config host ls newalias
+mc config host ls
 ```
 
 导入后, 用户根目录的
