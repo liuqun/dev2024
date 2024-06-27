@@ -1,5 +1,16 @@
 # Example using podman/docker:
 
+## 修改 podman 配置文件
+修改 podman 配置文件 `/etc/containers/registries.conf`
+添加国内镜像, 例如:
+```
+unqualified-search-registry=["docker.io"]
+
+[[registry]]
+prefix="docker.io"
+location="ustc-edu-cn.mirror.aliyuncs.com"
+```
+
 ## Redis 配置
 ```
 export REDIS_VERSION="7.2.4"
