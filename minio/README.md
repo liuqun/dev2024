@@ -58,7 +58,7 @@ MinIO控制台网页生成的密钥文件: credentials.json
 2. https://www.cnblogs.com/rongfengliang/p/10790072.html
 ```
 # Ubuntu/Debian:
-sudo apt-get install s3fs-fuse
+sudo apt-get install s3fs
 # CentOS7: yum install -y s3fs-fuse
 ```
 
@@ -67,10 +67,10 @@ echo "foobar:P@ssw0rd" > passwd-s3fs
 chmod 600 passwd-s3fs
 
 # 创建挂载点
-sudo mkdir /mnt/bucket-app
-sudo s3fs -o passwd_file=passwd-s3fs \
+mkdir ~/bucket-app
+s3fs -o passwd_file=passwd-s3fs \
     -o use_path_request_style \
     -o endpoint=us-east-1 \
     -o url=http://localhost:9000 \
-    -o bucket=app /mnt/bucket-app
+    -o bucket=app ~/bucket-app
 ```
